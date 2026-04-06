@@ -1,0 +1,21 @@
+m = [
+          [0, 1, 1, 0],
+          [1, 0, 0, 0],
+          [1, 0, 0 ,1],
+          [0, 0, 1, 0],
+]
+
+ur = []
+for i in range(12):
+    ur.append(0)
+    
+v = 0
+t = 1
+ur[v] = t
+rez = []
+
+for i, v in enumerate(m[v]):
+    if v == 1:
+        rez.append(i)
+print(ur)
+print(rez)
