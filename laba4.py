@@ -24,7 +24,7 @@ result = R_S(arr1, 0, 0)
 
 print('sum:', result, 'min:', mins, 'max:', maxs)
 
-for n in range(100):
-    for m in range(100):
-        if n**2 + m == 99: #n^2 + m = 99
-            print(n, m)
+# for n in range(100):
+#     for m in range(100):
+#         if n**2 + m == 99: #n^2 + m = 99
+#             print(n, m)
