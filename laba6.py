@@ -12,17 +12,25 @@ m = [
     [0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0]
 ]
 
-ur = []
-for i in range(12):
-    ur.append(0)
-    
-v = 0
+vershina = 9
+vis = [vershina]
+us = [vershina]
+t1 = {}
 t = 1
-ur[v] = t
-rez = []
 
-for i, v in enumerate(m[v]):
-    if v == 1:
-        rez.append(i)
-print(ur)
-print(rez)
+while us:
+    nl = []
+    for n in us:
+        for i, znachenie in enumerate(mat[n - 1]):
+            if znachenie == 1 and (i + 1) not in vis:
+                vis.append(i + 1)
+                t1[i + 1] = t + 1
+                nl.append(i + 1)
+    us = nl
+    t += 1
+
+t1[vershina] = 1
+
+print("Вершина: Уровень")
+for v1 in sorted(t1):
+    print(v1, ":", t1[v1])
