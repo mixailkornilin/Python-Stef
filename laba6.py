@@ -21,7 +21,7 @@ t = 1
 while us:
     nl = []
     for n in us:
-        for i, znachenie in enumerate(mat[n - 1]):
+        for i, znachenie in enumerate(m[n - 1]):
             if znachenie == 1 and (i + 1) not in vis:
                 vis.append(i + 1)
                 t1[i + 1] = t + 1
